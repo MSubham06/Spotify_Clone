@@ -130,7 +130,7 @@ The goal was to:
 
 ### 📱 Mobile View (< 600px)
 
-![Alt text](assets\mobile-view.png)
+![Alt text](assets/mobile-view.png)
 
 ## 📂 Folder Structure
 

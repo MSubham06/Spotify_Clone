@@ -16,7 +16,11 @@ body {
     width: 340px;
     border-radius: 1rem;
 }
-
+@media (max-width: 600px) {
+    .sidebar{
+        display: none;
+    }
+}
 .main-content {
     background-color: #121212;
     flex: 1;
@@ -357,11 +361,21 @@ a:hover {
     padding-bottom: 0.7rem;;
 }
 
+
 .player-control-icon {
     height: 1rem;
     margin-right: 1.75rem;
     opacity: 0.7;
     cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .player-control-icon{
+        margin-right: 0.9rem
+    }
+    .player {
+        padding-right: 2rem;
+    }
 }
 
 .player-control-icon:hover {
@@ -382,7 +396,7 @@ a:hover {
 
 .progress-bar {
     width: 60%;
-    height: 4px;
+    /* height: 4px; */
     appearance: none;
     cursor: pointer;
     border-radius: 100px;
@@ -390,28 +404,195 @@ a:hover {
 
 
 .progress-bar::-webkit-slider-runnable-track {
-    background-color: #ddd;
+    background: linear-gradient(to right, #1bd760 50%, #ddd 50%);
     border-radius: 100px;
     height: 0.2rem;
 }
 
+.progress-bar::-webkit-slider-runnable-track:hover {
+    background-color: #1bd760;
+}
+
 .progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #1bd760;
+    margin-top: -3px;
+}
+.progress-bar::-webkit-slider-thumb:hover {
     appearance: none;
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
-    background-color: #1bd760;
+    background-color: #ffffff;
     margin-top: -4px;
 }
 
+@media (max-width: 800px) {
+    .progress-bar {
+        width: 50%;
+    }
+}
 
 ::selection {
     background-color: #00ab3f;
     color: white;
 }
 
+.album {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.track-cover {
+    width: 3.5rem;
+    border-radius: 20%;
+    padding: 20px;
+    cursor: pointer;
+}
+.album-info {
+    margin-right: 10px;
+}
+
+.track-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+    cursor: pointer;
+}
+.track-dis {
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 0.6;
+    margin: 0;
+    cursor: pointer;
+}
+.track-dis:hover {
+    opacity: 1;
+    font-size: 500;
+    font-size: 1.05rem;
+}
+
+.track-title:hover {
+    opacity: 1;
+    font-weight: 700;
+    font-size: 1.35rem;
+}
+
+.album-options {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.album-options-icon {
+    font-size: 1.30rem;
+    padding-right: 10px;
+    opacity: 0.5;
+}
+.album-options-icon:hover {
+    font-size: 1.35rem;
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+    .hide2{
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .track-title{
+        font-size: 0.1rem;
+    }
+    .track-dis{
+        font-size: 0.1rem;
+    }
+    
+}
 
 
+@media (max-width: 600px) {
+    .track-title{
+        font-size: 0.8rem;
+    }
+    .track-dis{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .controls {
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    .album {
+        display: none;
+    }
+    .player {
+        padding: 0 0 0 100px;
+    }
+}
+
+
+@media (max-width: 1150px) {
+    .track-title{
+        font-size: 1rem;
+    }
+    .track-dis{
+        font-size: 0.9rem;
+    }
+    .controls {
+        font-size: 1rem;
+    }
+}
+
+.controls {
+    font-size: 1.2rem;
+    padding-right: 10px;
+}
+@media (max-width: 1150px) {
+    .controls {
+        font-size: 0.8rem;
+    }
+}
+.controls-icon {
+    opacity: 0.6;
+}
+
+.controls-icon:hover {
+    opacity: 1;
+}
+
+.volume {
+    -webkit-appearance: none; /* Remove default styling */
+    width: 90px;
+    height: 6px;
+    background: linear-gradient(to right, #1bd760 50%, #ddd 50%);
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+  
+  /* Handle (thumb) styling */
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: #1bd760;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.volume::-webkit-slider-thumb:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+}
+  
 
 
 

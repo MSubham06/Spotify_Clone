@@ -126,7 +126,7 @@ The goal was to:
 
 ### 🖥️ Desktop View
 
-![Alt text](assets\desktop-view.png)
+![Alt text](assets/desktop-view.png)
 
 ### 📱 Mobile View (< 600px)
 
